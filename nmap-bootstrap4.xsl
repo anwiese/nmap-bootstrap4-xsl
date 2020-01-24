@@ -239,7 +239,7 @@ Migrated to Bootstrap 4 by Andreas Wiese
       		 <li>Used port: <xsl:value-of select="@portid" />/<xsl:value-of select="@proto" /> (<xsl:value-of select="@state" />)  </li>
     		 </xsl:for-each>
     		  <xsl:for-each select="os/osmatch">
-      		  <li>OS match: <xsl:value-of select="@name" /><xsl:text> </xsl:text><span class="badge badge-info"><xsl:value-of select="@accuracy" />&percnt;</span></li>
+      		  <li>OS match: <xsl:value-of select="@name" /><xsl:text> </xsl:text><span class="badge badge-info"><xsl:value-of select="@accuracy" />%</span></li>
     		  </xsl:for-each>
   		</ul>
                 <xsl:if test="count(hostscript/script) > 0">
