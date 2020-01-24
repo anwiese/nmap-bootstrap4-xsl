@@ -168,8 +168,9 @@ Migrated to Bootstrap 4 by Andreas Wiese
                       <tr>
                         <th>Port</th>
                         <th>Protocol</th>
-                        <th>State<br/>Reason</th>
+                        <th>State</th>
                         <th>Service</th>
+                        <th>Reason</th>
                         <th>Product</th>
                         <th>Version</th>
                         <th>Extra Info</th>
@@ -182,8 +183,9 @@ Migrated to Bootstrap 4 by Andreas Wiese
                             <tr class="table-success">
                               <td title="Port"><xsl:value-of select="@portid"/></td>
                               <td title="Protocol"><xsl:value-of select="@protocol"/></td>
-                              <td title="State / Reason"><xsl:value-of select="state/@state"/><br/><xsl:value-of select="state/@reason"/></td>
+                              <td title="State"><xsl:value-of select="state/@state"/></td>
                               <td title="Service"><xsl:value-of select="service/@name"/></td>
+                              <td title="Reason"><xsl:value-of select="state/@reason"/></td>
                               <td title="Product"><xsl:value-of select="service/@product"/></td>
                               <td title="Version"><xsl:value-of select="service/@version"/></td>
                               <td title="Extra Info"><xsl:value-of select="service/@extrainfo"/></td>
@@ -191,35 +193,38 @@ Migrated to Bootstrap 4 by Andreas Wiese
                           </xsl:when>
                           <xsl:when test="state/@state = 'filtered'">
                             <tr class="table-warning">
-                              <td><xsl:value-of select="@portid"/></td>
-                              <td><xsl:value-of select="@protocol"/></td>
-                              <td><xsl:value-of select="state/@state"/><br/><xsl:value-of select="state/@reason"/></td>
-                              <td><xsl:value-of select="service/@name"/></td>
-                              <td><xsl:value-of select="service/@product"/></td>
-                              <td><xsl:value-of select="service/@version"/></td>
-                              <td><xsl:value-of select="service/@extrainfo"/></td>
+                              <td title="Port"><xsl:value-of select="@portid"/></td>
+                              <td title="Protocol"><xsl:value-of select="@protocol"/></td>
+                              <td title="State"><xsl:value-of select="state/@state"/></td>
+                              <td title="Service"><xsl:value-of select="service/@name"/></td>
+                              <td title="Reason"><xsl:value-of select="state/@reason"/></td>
+                              <td title="Product"><xsl:value-of select="service/@product"/></td>
+                              <td title="Version"><xsl:value-of select="service/@version"/></td>
+                              <td title="Extra Info"><xsl:value-of select="service/@extrainfo"/></td>
                             </tr>
                           </xsl:when>
                           <xsl:when test="state/@state = 'closed'">
                             <tr class="table-active">
-                              <td><xsl:value-of select="@portid"/></td>
-                              <td><xsl:value-of select="@protocol"/></td>
-                              <td><xsl:value-of select="state/@state"/><br/><xsl:value-of select="state/@reason"/></td>
-                              <td><xsl:value-of select="service/@name"/></td>
-                              <td><xsl:value-of select="service/@product"/></td>
-                              <td><xsl:value-of select="service/@version"/></td>
-                              <td><xsl:value-of select="service/@extrainfo"/></td>
+                              <td title="Port"><xsl:value-of select="@portid"/></td>
+                              <td title="Protocol"><xsl:value-of select="@protocol"/></td>
+                              <td title="State"><xsl:value-of select="state/@state"/></td>
+                              <td title="Service"><xsl:value-of select="service/@name"/></td>
+                              <td title="Reason"><xsl:value-of select="state/@reason"/></td>
+                              <td title="Product"><xsl:value-of select="service/@product"/></td>
+                              <td title="Version"><xsl:value-of select="service/@version"/></td>
+                              <td title="Extra Info"><xsl:value-of select="service/@extrainfo"/></td>
                             </tr>
                           </xsl:when>
                           <xsl:otherwise>
                             <tr class="table-info">
-                              <td><xsl:value-of select="@portid"/></td>
-                              <td><xsl:value-of select="@protocol"/></td>
-                              <td><xsl:value-of select="state/@state"/><br/><xsl:value-of select="state/@reason"/></td>
-                              <td><xsl:value-of select="service/@name"/></td>
-                              <td><xsl:value-of select="service/@product"/></td>
-                              <td><xsl:value-of select="service/@version"/></td>
-                              <td><xsl:value-of select="service/@extrainfo"/></td>
+                              <td title="Port"><xsl:value-of select="@portid"/></td>
+                              <td title="Protocol"><xsl:value-of select="@protocol"/></td>
+                              <td title="State"><xsl:value-of select="state/@state"/></td>
+                              <td title="Service"><xsl:value-of select="service/@name"/></td>
+                              <td title="Reason"><xsl:value-of select="state/@reason"/></td>
+                              <td title="Product"><xsl:value-of select="service/@product"/></td>
+                              <td title="Version"><xsl:value-of select="service/@version"/></td>
+                              <td title="Extra Info"><xsl:value-of select="service/@extrainfo"/></td>
                             </tr>
                           </xsl:otherwise>
                         </xsl:choose>
