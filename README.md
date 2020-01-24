@@ -12,6 +12,7 @@ nmap -sS -T4 -A -sC -oA scanme --stylesheet https://github.com/anwiese/nmap-boot
 ```
 
 - Open the scanme.xml with your Web browser.
+
 - Alternatively you can transform the xml to html with
 
 ```sh
