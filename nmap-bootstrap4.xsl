@@ -232,8 +232,18 @@ Migrated to Bootstrap 4 by Andreas Wiese
                     </tbody>
                   </table>
                 </div>
+		<h6>Remote Operating System Detection</h6>
+  		<xsl:if test="count(os/osmatch) = 0"><p>Unable to identify operating system.</p></xsl:if>
+  		<ul>
+    		 <xsl:for-each select="os/portused">
+      		 <li>Used port: <xsl:value-of select="@portid" />/<xsl:value-of select="@proto" /> (<xsl:value-of select="@state" />)  </li>
+    		 </xsl:for-each>
+    		  <xsl:for-each select="os/osmatch">
+      		  <li>OS match: <xsl:value-of select="@name" /> (<xsl:value-of select="@accuracy" />%)</li>
+    		  </xsl:for-each>
+  		</ul>
                 <xsl:if test="count(hostscript/script) > 0">
-                  <h6>Host Script</h6>
+                <h6>Host Script</h6>
                 </xsl:if>
                 <xsl:for-each select="hostscript/script">
                   <h6><xsl:value-of select="@id"/></h6>
