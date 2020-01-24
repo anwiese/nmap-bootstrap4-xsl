@@ -1,4 +1,4 @@
-# nmap-bootstrap-xsl
+# nmap-bootstrap4-xsl
 
 A Nmap XSL implementation with Bootstrap 4.
 
@@ -8,7 +8,7 @@ A Nmap XSL implementation with Bootstrap 4.
 - Example: 
 
 ```sh
-nmap -sS -T4 -A -sC -oA scanme --stylesheet https://raw.githubusercontent.com/honze-net/nmap-bootstrap-xsl/master/nmap-bootstrap.xsl scanme.nmap.org scanme2.nmap.org
+nmap -sS -T4 -A -sC -oA scanme --stylesheet https://github.com/anwiese/nmap-bootstrap4-xsl/raw/master/nmap-bootstrap4.xsl scanme.nmap.org scanme2.nmap.org
 ```
 
 - Open the scanme.xml with your Web browser.
