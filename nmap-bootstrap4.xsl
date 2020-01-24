@@ -49,7 +49,7 @@ Migrated to Bootstrap 4 by Andreas Wiese
               }
           }
         </style>
-        <title>Scan Report Nmap <xsl:value-of select="/nmaprun/@version"/> - Scanned at <xsl:value-of select="$start" /></title>
+        <title>Scan Report Nmap <xsl:value-of select="/nmaprun/@version"/> - Scanned at <xsl:value-of select="/nmaprun/@startstr"/></title>
       </head>
       <body>  
       <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
