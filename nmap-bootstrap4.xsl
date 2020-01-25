@@ -90,7 +90,7 @@ Migrated to Bootstrap 4 by Andreas Wiese
           </div>
           <h4 id="scannedhosts" class="target">Scanned Hosts<xsl:if test="/nmaprun/runstats/hosts/@down > 1024"><small> (offline hosts are hidden)</small></xsl:if></h4>
           <div class="table-responsive">
-            <table id="table-overview" class="table table-striped dataTable" role="grid">
+            <table id="table-overview" class="table dataTable" role="grid">
               <thead>
                 <tr>
                   <th>State</th>
@@ -236,7 +236,7 @@ Migrated to Bootstrap 4 by Andreas Wiese
   		<xsl:if test="count(os/osmatch) = 0"><p>Unable to identify operating system.</p></xsl:if>
   		<ul>
     		 <xsl:for-each select="os/portused">
-      		 <li>Used port: <xsl:value-of select="@portid" />/<xsl:value-of select="@proto" /> (<xsl:value-of select="@state" />)  </li>
+      		 <li>Used port: <xsl:value-of select="@portid" />/<xsl:value-of select="@proto" /><xsl:text> </xsl:text><span class="badge badge-secondary"><xsl:value-of select="@state" /></span></li>
     		 </xsl:for-each>
     		  <xsl:for-each select="os/osmatch">
       		  <li>OS match: <xsl:value-of select="@name" /><xsl:text> </xsl:text><span class="badge badge-info"><xsl:value-of select="@accuracy" />%</span></li>
@@ -254,7 +254,7 @@ Migrated to Bootstrap 4 by Andreas Wiese
           </xsl:for-each>
           <h4 id="openservices" class="target">Open Services</h4>
           <div class="table-responsive">
-            <table id="table-services" class="table table-striped dataTable" role="grid">
+            <table id="table-services" class="table dataTable" role="grid">
               <thead>
                 <tr>
                   <th>Address</th>
