@@ -20,6 +20,7 @@ Migrated to Bootstrap 4 by Andreas Wiese
         <style>
           body {
   		  	font-size: 0.875rem;
+			position: relative;
   		  }
           body > .container {
     		padding: 6rem 0.5rem 0;
@@ -51,17 +52,26 @@ Migrated to Bootstrap 4 by Andreas Wiese
         </style>
         <title>Scan Report Nmap <xsl:value-of select="/nmaprun/@version"/> - Scanned at <xsl:value-of select="/nmaprun/@startstr"/></title>
       </head>
-      <body>  
-      <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+      <body data-spy="scroll" data-target="#navbar-report">  
+      <nav id="navbar-report" class="navbar navbar-expand-md navbar-light fixed-top bg-light">
   		<a class="navbar-brand" href="#">Scan Report</a>
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
    		<span class="navbar-toggler-icon"></span>
   		</button>
   		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     		<div class="navbar-nav">
-      			<a class="nav-item nav-link" href="#scannedhosts">Scanned Hosts</a>
-      			<a class="nav-item nav-link" href="#onlinehosts">Online Hosts</a>
-      			<a class="nav-item nav-link" href="#openservices">Open Services</a>
+      			<ul class="nav">
+  				<li class="nav-item">
+    					<a class="nav-link" href="#scannedhosts">Scanned Hosts</a>
+  				</li>
+  				<li class="nav-item">
+    					<a class="nav-link" href="#onlinehosts">Online Hosts</a>
+  				</li>
+  				<li class="nav-item">
+    					<a class="nav-link" href="#openservices">Open Services</a>
+  				</li>
+  
+			</ul>
     		</div>
   		</div>
 		</nav>
