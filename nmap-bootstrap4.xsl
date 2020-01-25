@@ -179,6 +179,7 @@ Migrated to Bootstrap 4 by Andreas Wiese
                     </xsl:for-each>
                   </ul>
                 </xsl:if>
+		<xsl:if test="count(ports/port) > 0">
                 <h6>Ports</h6>
                 <div class="table-responsive">
                   <table class="table table-bordered">
@@ -250,6 +251,7 @@ Migrated to Bootstrap 4 by Andreas Wiese
                     </tbody>
                   </table>
                 </div>
+		</xsl:if>
 		<h6>Remote Operating System Detection</h6>
   		<xsl:if test="count(os/osmatch) = 0"><p>Unable to identify operating system.</p></xsl:if>
   		<ul>
