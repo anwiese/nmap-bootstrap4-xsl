@@ -21,7 +21,7 @@ xsltproc -o scanme.html nmap-bootstrap4.xsl scanme.xml
 
 - You will need to download the nmap-bootstrap4.xsl beforehand.
 
-- the third way is to use a online tool like [Free Online XSLT Test Tool](https://xslttest.appspot.com/)
+- The third way is to use a online tool like [Free Online XSLT Test Tool](https://xslttest.appspot.com/).
 
 ## Acknowledgments
 
