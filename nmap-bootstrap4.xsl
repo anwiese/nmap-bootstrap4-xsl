@@ -144,9 +144,11 @@ Migrated to Bootstrap 4 by Andreas Wiese
 	  </div>
 	  </div>	  
           <script>
-            $(document).ready(function() {
-              $('#table-overview').DataTable();
-            });
+	    $(document).ready(function() {
+    	     $('#table-overview').DataTable( {
+              "order": [[ 3, "desc" ]]
+    	     } );
+  	    } );
           </script>
           <h4 id="onlinehosts" class="target">Online Hosts</h4>
           <xsl:for-each select="/nmaprun/host[status/@state='up']">
