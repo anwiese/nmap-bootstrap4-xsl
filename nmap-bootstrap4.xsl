@@ -38,7 +38,7 @@ Migrated to Bootstrap 4 by Andreas Wiese
             display: block;
 			padding-top: 2rem;
           }
-	  .card > .dataTables_wrapper {
+	  .dataTables_wrapper {
 	  	padding: 3px;
 	  }
           .footer {
