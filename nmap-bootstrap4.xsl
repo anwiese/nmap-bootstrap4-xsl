@@ -6,8 +6,9 @@ Andreas Hontzia (@honze_net)
 Migrated to Bootstrap 4 by Andreas Wiese
 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="html"/>
+  <xsl:output method="html" encoding="utf-8" indent="yes"/>
   <xsl:template match="/">
+    <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
     <html lang="en">
       <head>
         <meta name="referrer" content="no-referrer"/> 
