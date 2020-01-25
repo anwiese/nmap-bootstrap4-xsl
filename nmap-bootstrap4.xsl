@@ -99,7 +99,10 @@ Migrated to Bootstrap 4 by Andreas Wiese
             </div>
           </div>
           <h4 id="scannedhosts" class="target">Scanned Hosts<xsl:if test="/nmaprun/runstats/hosts/@down > 1024"><small> (offline hosts are hidden)</small></xsl:if></h4>
-          <div class="table-responsive">
+          <div class="card">
+          <h6 class="card-header">Overview</h6>
+          <div class="card-body">
+	   <div class="table-responsive">
             <table id="table-overview" class="table dataTable" role="grid">
               <thead>
                 <tr>
@@ -138,6 +141,8 @@ Migrated to Bootstrap 4 by Andreas Wiese
               </tbody>
             </table>
           </div>
+	  </div>
+	  </div>	  
           <script>
             $(document).ready(function() {
               $('#table-overview').DataTable();
@@ -146,7 +151,7 @@ Migrated to Bootstrap 4 by Andreas Wiese
           <h4 id="onlinehosts" class="target">Online Hosts</h4>
           <xsl:for-each select="/nmaprun/host[status/@state='up']">
             <div class="card">
-            <h5 class="card-header"><xsl:value-of select="address/@addr"/><xsl:if test="count(hostnames/hostname) > 0"> - <xsl:value-of select="hostnames/hostname/@name"/></xsl:if></h5>
+            <h6 class="card-header"><xsl:value-of select="address/@addr"/><xsl:if test="count(hostnames/hostname) > 0"> - <xsl:value-of select="hostnames/hostname/@name"/></xsl:if></h6>
               <div class="card-body">
               <xsl:if test="count(address) > 0">
     			<h6>Address</h6>
@@ -263,7 +268,10 @@ Migrated to Bootstrap 4 by Andreas Wiese
             </div>
           </xsl:for-each>
           <h4 id="openservices" class="target">Open Services</h4>
-          <div class="table-responsive">
+          <div class="card">
+          <h6 class="card-header">Overview</h6>
+          <div class="card-body">
+	   <div class="table-responsive">
             <table id="table-services" class="table dataTable" role="grid">
               <thead>
                 <tr>
@@ -295,6 +303,8 @@ Migrated to Bootstrap 4 by Andreas Wiese
               </tbody>
             </table>
           </div>
+	  </div>
+	  </div>
           <script>
             $(document).ready(function() {
               $('#table-services').DataTable();
