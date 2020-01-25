@@ -23,4 +23,4 @@ xsltproc -o scanme.html nmap-bootstrap4.xsl scanme.xml
 
 ## Acknowledgments
 
-This work is based on the work of [Andreas Hontzia](https://github.com/honze-net). Special thanks to you!
+This work is based on the work of [Andreas Hontzia](https://github.com/honze-net). Special thanks!
