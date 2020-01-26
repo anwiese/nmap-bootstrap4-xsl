@@ -164,7 +164,7 @@ Migrated to Bootstrap 4 by Andreas Wiese
       			<ul>
         		<xsl:for-each select="address">
           		<li><xsl:value-of select="@addr"/>
-            			<xsl:if test="@vendor">
+            			<xsl:if test="@vendor != ''">
               			<xsl:text> - </xsl:text>
                 		<xsl:value-of select="@vendor"/>	
             			</xsl:if>
