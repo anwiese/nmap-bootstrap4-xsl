@@ -16,27 +16,27 @@ Migrated to Bootstrap 4 by Andreas Wiese
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/dataTables.bootstrap4.min.css" integrity="sha256-F+DaKAClQut87heMIC6oThARMuWne8+WzxIDT7jXuPA=" crossorigin="anonymous" />
         <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha384-fJU6sGmyn07b+uD1nMk7/iSb4yvaowcueiQhfVgQuD98rfva8mcr1eSvjchfpMrH" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  		<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js" integrity="sha256-t5ZQTZsbQi8NxszC10CseKjJ5QeMw5NINtOXQrESGSU=" crossorigin="anonymous"></script>
-  		<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/dataTables.bootstrap4.min.js" integrity="sha256-hJ44ymhBmRPJKIaKRf3DSX5uiFEZ9xB/qx8cNbJvIMU=" crossorigin="anonymous"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js" integrity="sha256-t5ZQTZsbQi8NxszC10CseKjJ5QeMw5NINtOXQrESGSU=" crossorigin="anonymous"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/dataTables.bootstrap4.min.js" integrity="sha256-hJ44ymhBmRPJKIaKRf3DSX5uiFEZ9xB/qx8cNbJvIMU=" crossorigin="anonymous"></script>
         <style>
           body {
-  		  	font-size: 0.875rem;
-			position: relative;
-  		  }
+  		font-size: 0.875rem;
+		position: relative;
+  	  }
           body > .container {
     		padding: 6rem 0.5rem 0;
 		  }
           table {
-  			 font-size: 0.875rem !important;
-  			 line-height: 1 !important;
-  		  }
-  		  .card {
-  		  	margin: 1rem 0rem;
-  		  }
+  		font-size: 0.875rem !important;
+  		line-height: 1 !important;
+  	  }
+  	  .card {
+  		margin: 1rem 0rem;
+    	  }
           .target:before {
-            content: "";
-            display: block;
-			padding-top: 2rem;
+            	content: "";
+            	display: block;
+		padding-top: 2rem;
           }
 	  .dataTables_wrapper {
 	  	padding: 3px;
@@ -47,11 +47,11 @@ Migrated to Bootstrap 4 by Andreas Wiese
     		bottom: 0;
     		width: 100%;
     		background-color: #f5f5f5;
-		  }
+	  }
           @media only screen and (min-width:1900px) {
             .container {
               width: 1800px;
-              }
+            }
           }
         </style>
         <title>Scan Report Nmap <xsl:value-of select="/nmaprun/@version"/> - Scanned at <xsl:value-of select="/nmaprun/@startstr"/></title>
@@ -167,7 +167,7 @@ Migrated to Bootstrap 4 by Andreas Wiese
             			<xsl:if test="@vendor != ''">
               			<xsl:text> - </xsl:text>
                 		<xsl:value-of select="@vendor"/>	
-            			</xsl:if>
+            		</xsl:if>
 			<xsl:text> </xsl:text>
             		<span class="badge badge-secondary text-uppercase"><xsl:value-of select="@addrtype"/></span>
           		</li>
@@ -178,8 +178,11 @@ Migrated to Bootstrap 4 by Andreas Wiese
                   <h6>Hostnames</h6>
                   <ul>
                     <xsl:for-each select="hostnames/hostname">
-                      <li><xsl:value-of select="@name"/> (<xsl:value-of select="@type"/>)</li>
-                    </xsl:for-each>
+                      <li>
+			<xsl:value-of select="@name"/>
+			<xsl:text> </xsl:text>
+            		<span class="badge badge-secondary text-uppercase"><xsl:value-of select="@type"/></span></li>
+                    	</xsl:for-each>
                   </ul>
                 </xsl:if>
 		<xsl:if test="count(ports/port) > 0">
