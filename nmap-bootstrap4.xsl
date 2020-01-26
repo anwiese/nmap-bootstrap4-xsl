@@ -162,18 +162,18 @@ Migrated to Bootstrap 4 by Andreas Wiese
               <xsl:if test="count(address) > 0">
     			<h6>Address</h6>
       			<ul>
-        			<xsl:for-each select="address">
-          				<li><xsl:value-of select="@addr"/>
+        		<xsl:for-each select="address">
+          		<li><xsl:value-of select="@addr"/>
             			<xsl:if test="@vendor">
               			<xsl:text> - </xsl:text>
-                		<xsl:value-of select="@vendor"/>
-              			<xsl:text> </xsl:text>
+                		<xsl:value-of select="@vendor"/>	
             			</xsl:if>
-            			<span class="badge badge-secondary text-uppercase"><xsl:value-of select="@addrtype"/></span>
-          				</li>
-        			</xsl:for-each>
+			<xsl:text> </xsl:text>
+            		<span class="badge badge-secondary text-uppercase"><xsl:value-of select="@addrtype"/></span>
+          		</li>
+        		</xsl:for-each>
       			</ul>
-  				</xsl:if>
+  		</xsl:if>
                 <xsl:if test="count(hostnames/hostname) > 0">
                   <h6>Hostnames</h6>
                   <ul>
