@@ -168,8 +168,7 @@ Migrated to Bootstrap 4 by Andreas Wiese
               			<xsl:text> - </xsl:text>
                 		<xsl:value-of select="@vendor"/>	
             		</xsl:if>
-			<xsl:text> </xsl:text>
-            		<span class="badge badge-secondary text-uppercase"><xsl:value-of select="@addrtype"/></span>
+			<span class="badge badge-secondary text-uppercase ml-1"><xsl:value-of select="@addrtype"/></span>
           		</li>
         		</xsl:for-each>
       			</ul>
@@ -180,8 +179,7 @@ Migrated to Bootstrap 4 by Andreas Wiese
                     <xsl:for-each select="hostnames/hostname">
                       <li>
 			<xsl:value-of select="@name"/>
-			<xsl:text> </xsl:text>
-            		<span class="badge badge-secondary text-uppercase"><xsl:value-of select="@type"/></span></li>
+			<span class="badge badge-secondary text-uppercase ml-1"><xsl:value-of select="@type"/></span></li>
                     	</xsl:for-each>
                   </ul>
                 </xsl:if>
@@ -262,10 +260,10 @@ Migrated to Bootstrap 4 by Andreas Wiese
   		<xsl:if test="count(os/osmatch) = 0"><p>Unable to identify operating system.</p></xsl:if>
   		<ul>
     		 <xsl:for-each select="os/portused">
-      		 <li>Used port: <xsl:value-of select="@portid" />/<xsl:value-of select="@proto" /><xsl:text> </xsl:text><span class="badge badge-secondary"><xsl:value-of select="@state" /></span></li>
+      		 <li>Used port: <xsl:value-of select="@portid" />/<xsl:value-of select="@proto" /><span class="badge badge-secondary ml-1"><xsl:value-of select="@state" /></span></li>
     		 </xsl:for-each>
     		  <xsl:for-each select="os/osmatch">
-      		  <li>OS match: <xsl:value-of select="@name" /><xsl:text> </xsl:text><span class="badge badge-info"><xsl:value-of select="@accuracy" />%</span></li>
+      		  <li>OS match: <xsl:value-of select="@name" /><span class="badge badge-info ml-1"><xsl:value-of select="@accuracy" />%</span></li>
     		  </xsl:for-each>
   		</ul>
                 <xsl:if test="count(hostscript/script) > 0">
