@@ -150,7 +150,7 @@ Migrated to Bootstrap 4 by Andreas Wiese
           <script>
 	    $(document).ready(function() {
     	     $('#table-overview').DataTable( {
-              "order": [[ 3, "desc" ]]
+              "order": [[ 0, "desc" ]]
     	     } );
   	    } );
           </script>
@@ -186,7 +186,7 @@ Migrated to Bootstrap 4 by Andreas Wiese
 		<xsl:if test="count(ports/port) > 0">
                 <h6>Ports</h6>
                 <div class="table-responsive">
-                  <table class="table table-bordered">
+                  <table class="table">
                     <thead>
                       <tr>
                         <th>Port</th>
@@ -227,7 +227,7 @@ Migrated to Bootstrap 4 by Andreas Wiese
                             </tr>
                           </xsl:when>
                           <xsl:when test="state/@state = 'closed'">
-                            <tr class="table-active">
+                            <tr class="table-secondary">
                               <td title="Port"><xsl:value-of select="@portid"/></td>
                               <td title="Protocol"><xsl:value-of select="@protocol"/></td>
                               <td title="State"><xsl:value-of select="state/@state"/></td>
